@@ -1,0 +1,143 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'install', '-g', 'compass' ]
+2 info using npm@2.11.3
+3 info using node@v0.12.7
+4 verbose install initial load of /usr/local/lib/package.json
+5 verbose readDependencies loading dependencies from /usr/local/lib/package.json
+6 silly cache add args [ 'compass', null ]
+7 verbose cache add spec compass
+8 silly cache add parsed spec { raw: 'compass',
+8 silly cache add   scope: null,
+8 silly cache add   name: 'compass',
+8 silly cache add   rawSpec: '',
+8 silly cache add   spec: '*',
+8 silly cache add   type: 'range' }
+9 silly addNamed compass@*
+10 verbose addNamed "*" is a valid semver range for compass
+11 silly addNameRange { name: 'compass', range: '*', hasData: false }
+12 silly mapToRegistry name compass
+13 silly mapToRegistry using default registry
+14 silly mapToRegistry registry https://registry.npmjs.org/
+15 silly mapToRegistry uri https://registry.npmjs.org/compass
+16 verbose addNameRange registry:https://registry.npmjs.org/compass not in flight; fetching
+17 verbose request uri https://registry.npmjs.org/compass
+18 verbose request no auth needed
+19 info attempt registry request try #1 at 3:59:12 AM
+20 verbose request id 789273506984e31e
+21 verbose etag "5LH6SCHEQBUQPVJSFYLAOP04U"
+22 http request GET https://registry.npmjs.org/compass
+23 http 304 https://registry.npmjs.org/compass
+24 silly get cb [ 304,
+24 silly get   { date: 'Sat, 19 Sep 2015 07:59:12 GMT',
+24 silly get     via: '1.1 varnish',
+24 silly get     'cache-control': 'max-age=60',
+24 silly get     etag: '"5LH6SCHEQBUQPVJSFYLAOP04U"',
+24 silly get     age: '0',
+24 silly get     connection: 'keep-alive',
+24 silly get     'x-served-by': 'cache-dfw1832-DFW',
+24 silly get     'x-cache': 'MISS',
+24 silly get     'x-cache-hits': '0',
+24 silly get     'x-timer': 'S1442649552.685424,VS0,VE187',
+24 silly get     vary: 'Accept' } ]
+25 verbose etag https://registry.npmjs.org/compass from cache
+26 verbose get saving compass to /Users/shawngong/.npm/registry.npmjs.org/compass/.cache.json
+27 silly addNameRange number 2 { name: 'compass', range: '*', hasData: true }
+28 silly addNameRange versions [ 'compass', [ '0.1.0', '0.1.1' ] ]
+29 silly addNamed compass@0.1.1
+30 verbose addNamed "0.1.1" is a plain semver version for compass
+31 silly cache afterAdd compass@0.1.1
+32 verbose afterAdd /Users/shawngong/.npm/compass/0.1.1/package/package.json not in flight; writing
+33 verbose afterAdd /Users/shawngong/.npm/compass/0.1.1/package/package.json written
+34 silly install resolved [ { name: 'compass',
+34 silly install resolved     version: '0.1.1',
+34 silly install resolved     description: 'Compass for node.js',
+34 silly install resolved     main: 'index.js',
+34 silly install resolved     scripts: { test: 'echo "Error: no test specified" && exit 1' },
+34 silly install resolved     repository:
+34 silly install resolved      { type: 'git',
+34 silly install resolved        url: 'git+ssh://git@github.com/ngryman/compass.git' },
+34 silly install resolved     keywords: [ 'compass', 'sass', 'scss' ],
+34 silly install resolved     author: { name: 'Nicolas Gryman' },
+34 silly install resolved     license: 'MIT',
+34 silly install resolved     devDependencies:
+34 silly install resolved      { mocha: '1.8.x',
+34 silly install resolved        chai: '1.5.x',
+34 silly install resolved        express: '3.1.x',
+34 silly install resolved        supertest: '0.5.x' },
+34 silly install resolved     gitHead: '219e69e47f590d8906e203844f6fe8ae761d3240',
+34 silly install resolved     bugs: { url: 'https://github.com/ngryman/compass/issues' },
+34 silly install resolved     homepage: 'https://github.com/ngryman/compass',
+34 silly install resolved     _id: 'compass@0.1.1',
+34 silly install resolved     _shasum: '5c56d5eb442d10c1ad5989ef5c5e925db60c60e1',
+34 silly install resolved     _from: 'compass@*',
+34 silly install resolved     _npmVersion: '1.4.28',
+34 silly install resolved     _npmUser: { name: 'ngryman', email: 'ngryman@gmail.com' },
+34 silly install resolved     maintainers: [ [Object] ],
+34 silly install resolved     dist:
+34 silly install resolved      { shasum: '5c56d5eb442d10c1ad5989ef5c5e925db60c60e1',
+34 silly install resolved        tarball: 'http://registry.npmjs.org/compass/-/compass-0.1.1.tgz' },
+34 silly install resolved     directories: {},
+34 silly install resolved     _resolved: 'https://registry.npmjs.org/compass/-/compass-0.1.1.tgz',
+34 silly install resolved     readme: 'ERROR: No README data found!' } ]
+35 info install compass@0.1.1 into /usr/local/lib
+36 info installOne compass@0.1.1
+37 verbose installOne of compass to /usr/local/lib not in flight; installing
+38 verbose lock using /Users/shawngong/.npm/_locks/compass-282e6d634fed1ba9.lock for /usr/local/lib/node_modules/compass
+39 silly install write writing compass 0.1.1 to /usr/local/lib/node_modules/compass
+40 verbose unbuild lib/node_modules/compass
+41 silly gentlyRm /usr/local/lib/node_modules/compass is being purged from base /usr/local
+42 verbose gentlyRm don't care about contents; nuking /usr/local/lib/node_modules/compass
+43 verbose tar unpack /Users/shawngong/.npm/compass/0.1.1/package.tgz
+44 verbose tar unpacking to /usr/local/lib/node_modules/compass
+45 silly gentlyRm /usr/local/lib/node_modules/compass is being purged
+46 verbose gentlyRm don't care about contents; nuking /usr/local/lib/node_modules/compass
+47 silly gunzTarPerm modes [ '755', '644' ]
+48 silly gunzTarPerm extractEntry package.json
+49 silly gunzTarPerm extractEntry .npmignore
+50 silly gunzTarPerm extractEntry README.md
+51 silly gunzTarPerm extractEntry index.js
+52 silly gunzTarPerm extractEntry lib/compass.js
+53 silly gunzTarPerm extractEntry test/compass.js
+54 silly gunzTarPerm extractEntry test/fixtures/config.rb
+55 silly gunzTarPerm extractEntry test/fixtures/sass/_base.scss
+56 silly gunzTarPerm extractEntry test/fixtures/sass/style.scss
+57 verbose write writing to /usr/local/lib/node_modules/compass/package.json
+58 info preinstall compass@0.1.1
+59 verbose readDependencies loading dependencies from /usr/local/lib/node_modules/compass/package.json
+60 verbose readDependencies loading dependencies from /usr/local/lib/node_modules/compass/package.json
+61 silly install resolved []
+62 verbose about to build /usr/local/lib/node_modules/compass
+63 info build /usr/local/lib/node_modules/compass
+64 info linkStuff compass@0.1.1
+65 silly linkStuff compass@0.1.1 has /usr/local/lib/node_modules as its parent node_modules
+66 silly linkStuff compass@0.1.1 is part of a global install
+67 silly linkStuff compass@0.1.1 is installed into a global node_modules
+68 silly linkStuff compass@0.1.1 is installed into the top-level global node_modules
+69 verbose linkBins compass@0.1.1
+70 verbose linkMans compass@0.1.1
+71 verbose rebuildBundles compass@0.1.1
+72 info install compass@0.1.1
+73 info postinstall compass@0.1.1
+74 verbose unlock done using /Users/shawngong/.npm/_locks/compass-282e6d634fed1ba9.lock for /usr/local/lib/node_modules/compass
+75 verbose validateInstall loading /usr/local/lib/package.json for validation
+76 verbose stack Error: The package generator-karma does not satisfy its siblings' peerDependencies requirements!
+76 verbose stack     at /usr/local/lib/node_modules/npm/lib/install.js:125:32
+76 verbose stack     at /usr/local/lib/node_modules/npm/lib/install.js:267:7
+76 verbose stack     at /usr/local/lib/node_modules/npm/node_modules/read-installed/read-installed.js:138:5
+76 verbose stack     at /usr/local/lib/node_modules/npm/node_modules/read-installed/read-installed.js:251:14
+76 verbose stack     at cb (/usr/local/lib/node_modules/npm/node_modules/slide/lib/async-map.js:47:24)
+76 verbose stack     at /usr/local/lib/node_modules/npm/node_modules/read-installed/read-installed.js:251:14
+76 verbose stack     at cb (/usr/local/lib/node_modules/npm/node_modules/slide/lib/async-map.js:47:24)
+76 verbose stack     at /usr/local/lib/node_modules/npm/node_modules/read-installed/read-installed.js:251:14
+76 verbose stack     at cb (/usr/local/lib/node_modules/npm/node_modules/slide/lib/async-map.js:47:24)
+76 verbose stack     at /usr/local/lib/node_modules/npm/node_modules/read-installed/read-installed.js:251:14
+77 verbose cwd /Users/shawngong/Documents/Projects/angularexpress
+78 error Darwin 14.3.0
+79 error argv "node" "/usr/local/bin/npm" "install" "-g" "compass"
+80 error node v0.12.7
+81 error npm  v2.11.3
+82 error code EPEERINVALID
+83 error peerinvalid The package generator-karma does not satisfy its siblings' peerDependencies requirements!
+83 error peerinvalid Peer generator-angular@0.12.1 wants generator-karma@>=0.9.0
+83 error peerinvalid Peer generator-express-angular@0.2.9 wants generator-karma@~0.5.0
+84 verbose exit [ 1, true ]

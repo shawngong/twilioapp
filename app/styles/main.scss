@@ -1,12 +1,9 @@
 $iconSpritePath: "../images/glyphicons-halflings.png";
 $iconWhiteSpritePath: "../images/glyphicons-halflings-white.png";
 
-@import "bootstrap-sass/lib/bootstrap";
-
-/* Put your CSS here */
-html, body {
-  margin: 20px;
-}
+$icon-font-path: "bootstrap-sass/assets/fonts/bootstrap/";
+@import "bootstrap-sass/assets/stylesheets/bootstrap-sprockets";
+@import "bootstrap-sass/assets/stylesheets/bootstrap";
 
 body {
     background: #fafafa;
@@ -29,4 +26,61 @@ body {
     font-size: 60px;
     line-height: 1;
     letter-spacing: -1px;
+}
+
+.container {
+  width: 80%;
+  margin: auto auto;
+  font-family: 'Lora', serif;
+  margin-top: 40px;
+}
+
+.link {
+  font-size: 20px;
+  float:left;
+}
+
+.background {
+  background-image: url("pexels-photo.jpg");
+}
+
+.layer {
+  background: rgba(255, 255, 255, 0.6);
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.mp3input {
+  float: left;
+  height: 30px;
+  line-height: 20px;
+  font-size: 20px;
+}
+
+.mp3button {
+  float: left;
+  font-size: 20px;
+  line-height: 20px;
+  margin-top: 3px;
+}
+
+
+.wrapper {
+  margin-top: 100px;
+  margin-left: 10%;
+}
+
+.title {
+  text-align: center;
+  font-size: 50px;
+}
+
+.subtitle {
+  font-size: 20px;
+  font-style: italic;
+  text-align: center;
+  margin-top: 20px;
 }

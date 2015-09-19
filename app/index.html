@@ -12,10 +12,51 @@
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
         <!-- build:css({.tmp,app}) styles/main.css -->
+        <link rel="styleshee" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
         <link rel="stylesheet" href="styles/main.css">
+        <link href='https://fonts.googleapis.com/css?family=Lora' rel='stylesheet' type='text/css'>
         <!-- endbuild -->
 </head>
-  <body ng-app="angularexpressApp">
+  <body ng-app="angularexpressApp" class="background">
+    <div class="layer">
+      <div class="container">
+        <div class="title">
+          Musicx
+        </div>
+        <div class="subtitle">
+          Share music you love.
+        </div>
+        <div class="wrapper" ng-controller="appController">
+          <div class="row">
+            <div class="link">
+              Who is sending the song?
+            </div>
+            <input class="mp3input" type="text" ng-model="user">
+          </div>
+          <div class="row">
+            <div class="link">
+              What's your friend's number?
+            </div>
+            <input class="mp3input" type="text" ng-model="phone">
+          </div>
+          <div class="row">
+            <div class="link">
+              What's the song name?
+            </div>
+            <input class="mp3input" type="text" ng-model="song">
+          </div>
+          <div class="row">
+            <div class="link">
+              Insert link to mp3 file
+            </div>
+            <input class="mp3input" type="text" ng-model="mp3link">
+          </div>
+          <div class="rowlast">
+              <input type="button" class="mp3button" ng-click="mp3submit()" value="Submit">
+          </div>
+        </div>
+      </div>
+    </div>
     <!--[if lt IE 7]>
       <p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
     <![endif]-->
@@ -35,35 +76,10 @@
       g.src='//www.google-analytics.com/ga.js';
       s.parentNode.insertBefore(g,s)}(document,'script'));
     </script>
-
+    <!-- build:js({.tmp,app}) scripts/scripts.js -->
     <script src="bower_components/jquery/jquery.js"></script>
     <script src="bower_components/angular/angular.js"></script>
-
-        <!-- build:js scripts/plugins.js -->
-        <script src="bower_components/bootstrap-sass/js/bootstrap-affix.js"></script>
-        <script src="bower_components/bootstrap-sass/js/bootstrap-alert.js"></script>
-        <script src="bower_components/bootstrap-sass/js/bootstrap-dropdown.js"></script>
-        <script src="bower_components/bootstrap-sass/js/bootstrap-tooltip.js"></script>
-        <script src="bower_components/bootstrap-sass/js/bootstrap-modal.js"></script>
-        <script src="bower_components/bootstrap-sass/js/bootstrap-transition.js"></script>
-        <script src="bower_components/bootstrap-sass/js/bootstrap-button.js"></script>
-        <script src="bower_components/bootstrap-sass/js/bootstrap-popover.js"></script>
-        <script src="bower_components/bootstrap-sass/js/bootstrap-typeahead.js"></script>
-        <script src="bower_components/bootstrap-sass/js/bootstrap-carousel.js"></script>
-        <script src="bower_components/bootstrap-sass/js/bootstrap-scrollspy.js"></script>
-        <script src="bower_components/bootstrap-sass/js/bootstrap-collapse.js"></script>
-        <script src="bower_components/bootstrap-sass/js/bootstrap-tab.js"></script>
-        <!-- endbuild -->
-
-        <!-- build:js scripts/modules.js -->
-        <script src="bower_components/angular-resource/angular-resource.js"></script>
-        <script src="bower_components/angular-cookies/angular-cookies.js"></script>
-        <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
-        <!-- endbuild -->
-
-        <!-- build:js({.tmp,app}) scripts/scripts.js -->
-        <script src="scripts/app.js"></script>
-        <script src="scripts/controllers/main.js"></script>
-        <!-- endbuild -->
+    <script src="scripts/app.js"></script>
+    <!-- endbuild -->
 </body>
 </html>

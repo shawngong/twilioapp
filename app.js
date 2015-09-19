@@ -14,8 +14,20 @@ var rickRoll = "http://demo.twilio.com/docs/voice.xml";
 var search = "aaaambient";
 
 app.use(express.logger());
+app.use(express.static('dist'));
 
+app.get("/", function (req,res) {
+	res.render('../dist/index.html');
+});
 
+app.get("/call", function(req,res){
+	var user = req.body.user;
+	var phone = req.body.phone;
+	var song = req.body.song;
+	var mp3link = req.body.mp3link;
+	res.send(user);
+
+});
 
 app.get("/test", function (req, res) {
 	res.set("Content-Type", "text/xml");
@@ -102,10 +114,6 @@ app.configure(function(){
   app.use(express.static(__dirname + '/app'));
   app.use(app.router);
   app.engine('html', require('ejs').renderFile);
-});
-
-app.get('/', function(request, response) {
-  response.render('index.html')
 });
 
 var port = process.env.PORT || 5000;
