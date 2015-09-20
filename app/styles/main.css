@@ -41,6 +41,13 @@ body {
   background-image: url("pexels-photo.jpg");
 }
 
+.box {
+  font-size: 25px;
+  font-family: 'Lora', serif;
+  font-style: italic;
+  text-align: center;
+}
+
 .layer {
   background: rgba(255, 255, 255, 0.6);
   position: absolute;
@@ -63,12 +70,20 @@ body {
   font-size: 30px;
   line-height: 40px;
   padding: 10px;
-  margin-left: 38%;
+  margin-left: 42%;
 }
+
+.mp3reset {
+  font-size: 30px;
+  line-height: 40px;
+  padding: 10px;
+  margin-left: 35%;
+}
+
 
 .wrapper {
   margin-top: 100px;
-  margin-left: 10%;
+  width: 80%;
 }
 
 .title {

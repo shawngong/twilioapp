@@ -8,26 +8,51 @@ var http = require('http');
 var app = express();
 var o2x = require('object-to-xml');
 var qs = require('querystring');
+var bodyparser = require('body-parser');
 
 var twiml2 = "https://api.twilio.com/cowbell.mp3";
 var rickRoll = "http://demo.twilio.com/docs/voice.xml";
 var search = "aaaambient";
+var callobj = {mp3link: "https://api.twilio.com/cowbell.mp3" };
 
 app.use(express.logger());
 app.use(express.static('dist'));
+app.use(bodyparser());
 
 app.get("/", function (req,res) {
-	res.render('../dist/index.html');
+	res.render('index.html');
 });
 
-app.get("/call", function(req,res){
-	var user = req.body.user;
-	var phone = req.body.phone;
-	var song = req.body.song;
-	var mp3link = req.body.mp3link;
-	res.send(user);
-
+app.post("/call", function(req,res){
+	callobj.user = req.body.user;
+	callobj.phone = req.body.phone;
+	callobj.song = req.body.song;
+	callobj.mp3link = req.body.mp3link;
+	res.send(200);
 });
+
+app.get("/call", function(req,res) {
+	console.log(callobj);
+	res.set("Content-Type", "text/xml");
+	res.send(o2x({
+		'?xml version="1.0" encoding="utf-8"?' : null,
+		Response: {
+				Play: callobj.mp3link
+		}
+	}));
+	client.calls.create({
+		to: callobj.phone,
+		from: "+12268871654",
+		url: callobj.mp3link,
+		method: "GET",
+		fallbackMethod: "GET",
+		statusCallbackMethod: "GET",
+		record: "false"
+	}, function(err, call) {
+		console.log(call.sid);
+	});
+});
+
 
 app.get("/test", function (req, res) {
 	res.set("Content-Type", "text/xml");
