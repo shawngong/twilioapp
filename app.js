@@ -32,7 +32,6 @@ app.post("/call", function(req,res){
 });
 
 app.get("/call", function(req,res) {
-	console.log(callobj);
 	res.set("Content-Type", "text/xml");
 	res.send(o2x({
 		'?xml version="1.0" encoding="utf-8"?' : null,
