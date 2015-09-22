@@ -50,6 +50,14 @@ app.get("/call", function(req,res) {
 	}, function(err, call) {
 		console.log(call.sid);
 	});
+	client.messages.create({
+				body: "You friend " + callobj.user + " has just sent you the song " + callobj.song + ". Enjoy!",
+				to: callobj.phone,
+				from: "+12268871654"
+		}, function(err, message) {
+			console.log(err);
+				//process.stdout.write(message.sid);
+	});
 });
 
 
