@@ -1,5 +1,12 @@
 
 /* Put your CSS here */
+@media (max-width: 1200px) {
+  .link {
+    margin-bottom: 5px;
+  }
+}
+
+
 body {
     background: #fafafa;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
